@@ -11,7 +11,7 @@
 /**
  * ESP8266 and ESP32 specific true random number generator
  */
-class RNG
+class ESPRNG
 {
     public:
         /**

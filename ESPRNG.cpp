@@ -9,7 +9,7 @@
  * 
  */
 
-void RNG::fill(uint8_t *dst, unsigned int length)
+void ESPRNG::fill(uint8_t *dst, unsigned int length)
 {
     // ESP8266 and ESP32 only
     for (int i = 0; i < length; i++)
@@ -21,7 +21,7 @@ void RNG::fill(uint8_t *dst, unsigned int length)
 #endif
 }
 
-byte RNG::get()
+byte ESPRNG::get()
 {
 #if defined ESP32
     // ESP32 only
@@ -37,7 +37,7 @@ byte RNG::get()
 #endif
 }
 
-uint32_t RNG::getLong()
+uint32_t ESPRNG::getLong()
 {
 #if defined ESP32
     // ESP32 only
